@@ -1,0 +1,11 @@
+{
+  "name": "getting-started",
+  "description": "Getting started with angular components",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "bootstrap": "^3.3.6"
+  }
+}
