@@ -6,6 +6,9 @@
   "homepage": "",
   "dependencies": {
     "angular": "^1.5.6",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "svg-pan-zoom": "~3.4.0",
+    "angular-material": "~1.1.1",
+    "angular-svg-pan-zoom": "*"
   }
 }

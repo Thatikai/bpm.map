@@ -1,0 +1,26 @@
+<g id="selectRect" class="selectRect">
+    <g ng-if="isActive">
+        <rect ng-attr-x="{{x}}" ng-attr-y="{{y}}" style="stroke-width: 1;stroke-dasharray: 10 5; stroke: #0cc" ng-attr-width="{{width}}" ng-attr-height="{{height}}" cursor="move" fill="#f00" fill-opacity="0.4"/>
+        <circle ng-attr-cx="{{x}}" ng-attr-cy="{{y}}" r="3" fill="#c00" cursor="nw-resize"></circle>
+        <circle ng-attr-cx="{{x + width}}" ng-attr-cy="{{y}}" r="3" fill="#c00" cursor="ne-resize"></circle>
+        <circle ng-attr-cx="{{x}}" ng-attr-cy="{{y + height}}" r="3" fill="#c00" cursor="sw-resize"></circle>
+        <circle ng-attr-cx="{{x + width}}" ng-attr-cy="{{y + height}}" r="3" cursor="se-resize" fill="#c00"></circle>
+        <circle ng-attr-cx="{{x + width/2}}" ng-attr-cy="{{y}}" r="3" fill="#c00" cursor="n-resize"></circle>
+        <circle ng-attr-cx="{{x + width/2}}" ng-attr-cy="{{y + height}}" r="3" fill="#c00" cursor="s-resize"></circle>
+        <circle ng-attr-cx="{{x}}" ng-attr-cy="{{y + height/2}}" r="3" fill="#c00" cursor="w-resize"></circle>
+        <circle ng-attr-cx="{{x + width}}" ng-attr-cy="{{y + height/2}}" r="3" cursor="e-resize" fill="#c00"></circle>
+        <g ng-attr-transform="translate({{x}},{{y - 20}})">
+            <rect x="0" y="0" fill="#c00" width="70" height="15" rx="5" ry="5">
+            </rect>
+            <text x="5" y="11" font-family="Verdana" font-size="10" fill="#fff">{{'(' + x + ','+ y + ')'}} </text>
+        </g>
+        <g ng-attr-transform="translate({{x + width}},{{y + height + 10}})">
+            <rect x="0" y="0" fill="#c00" width="70" height="15" rx="5" ry="5">
+            </rect>
+            <text x="5" y="11" font-family="Verdana" font-size="10" fill="#fff">({{x + width}}, {{y + height}}) </text>
+        </g>
+    </g>
+    <g ng-if="!isActive">
+        <rect ng-attr-x="{{x}}" ng-attr-y="{{y}}" style="stroke-width: 1; stroke: #666" ng-attr-width="{{width}}" ng-attr-height="{{height}}" fill="#999" fill-opacity="0.6"/>
+    </g>
+</g>
